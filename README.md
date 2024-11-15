@@ -26,15 +26,17 @@ This tutorial provides examples in Java and Python on how to code a basic Agentf
 | Python | [Action API URL](https://agentforce-tutorial-java-fd05948b2c0a.herokuapp.com) | [Action API Test Page](https://agentforce-tutorial-java-fd05948b2c0a.herokuapp.com/swagger-ui/index.html) | Go to this [GitHub Repository](https://github.com/heroku-examples/heroku-agentforce-tutorial-java)
 | Java | [Action API URL](x) | [Action API Test Page](x) | Go to this [GitHub Repository]()
 
-If you are using the predeployed versions, right click the ***Action API URL*** link from above (language choice does not really matter in this case) and copy to the URL to your clipboard when requested below. Before moving on you may also clck the ***Action API Test URL*** to try the API out from your browser, this will be the API Agentforce will eventually callout to when invoking your action. Otherwise follow the instructions in the respective repository above and return here with the deployed URL.
+If you are using the predeployed versions, right click the ***Action API URL*** link from above (language choice does not really matter in this case) and copy to the URL to your clipboard when requested below. You may want to click the ***Action API Test URL*** to try the API out from your browser, this will be the API Agentforce will eventually callout to when invoking your action.
 
-Step 2 - Creating a Named Credential for your Action
-----------------------------------------------------
+Otherwise, if you want to deploy your own action before proceeding, follow the instructions in the respective repository above and return here with the deployed URL.
+
+Step 2 - Creating a Named Credential
+------------------------------------
 
 Bla bla bla
 
-Step 3 - Importing your Action with External Services
------------------------------------------------------
+Step 3 - Registering the Action API
+-----------------------------------
 
 Bla bla bla
 
