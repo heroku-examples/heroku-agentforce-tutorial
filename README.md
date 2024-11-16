@@ -23,7 +23,7 @@ This tutorial provides examples in Java and Python on how to code a basic Agentf
 
 | Language | Predeployed API URL | Predployed API Test Page | Or Deploy your Own to Heroku
 | -------- | --------------- | ------------------- | -----------
-| Python | [Action API URL](x) | [Action API Test Page](x) | Go to this [GitHub Repository](https://github.com/heroku-examples/heroku-agentforce-tutorial-python)
+| Python | [Action API URL](https://agentforce-tutorial-python-7894e9215571.herokuapp.com/) | [Action API Test Page](https://agentforce-tutorial-python-7894e9215571.herokuapp.com/) | Go to this [GitHub Repository](https://github.com/heroku-examples/heroku-agentforce-tutorial-python)
 | Java | [Action API URL](https://agentforce-tutorial-java-fd05948b2c0a.herokuapp.com) | [Action API Test Page](https://agentforce-tutorial-java-fd05948b2c0a.herokuapp.com/swagger-ui/index.html) | Go to this [GitHub Repository](https://github.com/heroku-examples/heroku-agentforce-tutorial-java)
 
 With the above information you have two paths to take:
