@@ -87,11 +87,23 @@ Step 5 - Creating an Agentforce Action
 
 2. From the `Flow Builder`, open the `Toolbox` by clicking the sidebar icon near the top left of the screen. Click `New Resource` and create the following variable resources.
 
-    | Resource Type | API Name | Data Type | Apex Class | Availability Outside the Flow |
-    | ------------- | -------- | --------- | -----------| ----------------------------- |
-    | Variable | AgentActionRequestName | Text | Not Applicable | Available for Input |
-    | Variable | AgentActionResponseMessage | Text | Not Applicable | Available for Output |
-    | Variable | AgentActionRequest | Apex Defined | ExternalService__HerokuAgentAction_AgentRequest | None |
+    - **Resource Type**: Variable
+      - **API Name**: AgentActionRequestName
+      - **Data Type**: Text
+      - **Apex Class**: Not Applicable
+      - **Availability Outside the Flow**: Available for Input
+    
+    - **Resource Type**: Variable
+      - **API Name**: AgentActionResponseMessage
+      - **Data Type**: Text
+      - **Apex Class**: Not Applicable
+      - **Availability Outside the Flow**: Available for Output
+    
+    - **Resource Type**: Variable
+      - **API Name**: AgentActionRequest
+      - **Data Type**: Apex Defined
+      - **Apex Class**: ExternalService__HerokuAgentAction_AgentRequest
+      - **Availability Outside the Flow**: None
 
     Your `Flow` should look like this so far:
 
