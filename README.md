@@ -129,7 +129,7 @@ Step 5 - Creating an Agentforce Action
     | ----- | ---- |
     | `Agent Action Instructions` | Use this action to produce a unique Heroku badge with a custom name printed on it |
     | `AgentActionRequestName Instructions` | Name to be placed on the badge. Do not show the parameter name. |
-    | `AgentActionResponseMessage Instructions` | Confirmation that the badge has been created. |
+    | `AgentActionResponseMessage Instructions` | Display the action confirmation message. |
 
 Step 6 - Using Agent Builder
 ----------------------------
