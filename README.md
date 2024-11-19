@@ -115,13 +115,11 @@ Step 5 - Creating an Agentforce Action
 
 7. Click `Save`, enter `Heroku Agent Action`, and click `Save`, followed by clicking `Activate`.
 
-    Search for `Agent Actions` under the `Setup` menu, and click `New Agent Action`, selecting `Flow` as the `Reference Action Type`.
-
-    In the `Reference Action` search field, search for `Heroku` so that you see the following:
+8. Search for `Agent Actions` under the `Setup` menu, and click `New Agent Action`, selecting `Flow` as the `Reference Action Type`. In the `Reference Action` search field, search for `Heroku` so that you see the following:
 
     <img src="images/step5-6.jpg" width="80%" alt="Image description">
 
-8. Complete defining the action as follows and click `Finish`.
+9. Complete defining the action as follows and click `Finish`.
 
     <img src="images/step5-7.jpg" width="80%" alt="Image description">
 
