@@ -14,7 +14,7 @@ The examples in this tutorial are intentially basic to allow you a clean startin
 
 | Example | Demo Video |  | Related Content
 | ------- | ---------- | ---------- | ---------------
-| The **Archive Agent** action demonstrates using Heroku to access and perform complex compute over unstructed archived data using AI to interpret natural language requests from the user to perform a wider array of dynamic calculations on the data. | [Link](https://youtu.be/mNgrdf1GX-w)| <img src="images/archiveagent2.png" width="50%" alt="Image description"> | [Blog](https://blog.heroku.com/building-supercharged-agents-heroku-agentforce) [Code](https://github.com/heroku-examples/agentforce-collage-agent)
+| The **Archive Agent** action demonstrates using Heroku to access and perform complex compute over unstructed archived data using AI to interpret natural language requests from the user to perform a wider array of dynamic calculations on the data. | [Link](https://youtu.be/mNgrdf1GX-w)| <img src="images/archiveagent2.png" width="80%" alt="Image description"> | [Blog](https://blog.heroku.com/building-supercharged-agents-heroku-agentforce) [Code](https://github.com/heroku-examples/agentforce-collage-agent)
 | With the **Coral Cloud Collage Agent** we explore how the Coral Cloud Resort invites its guests to browse and book unique experiences throughout their stay using Agentforce. With Heroku, we extend the agents functionality to generate a personalized collage of each guest's adventures, showcasing how custom code deployed on Heroku can create dynamic digital media delivered directly within the Agentforce experience. | [Link](https://www.youtube.com/watch?v=yd97A9GLFUA&t=3s)| ![image](images/collage2.jpg) ![image](images/collage.png) | [Code](https://github.com/heroku-examples/agentforce-collage-agent)
 
 
@@ -37,17 +37,17 @@ Step 2 - Creating a Named Credential
 
 1. Search for `Named Credentials` under `Setup` and select the `External Credentials` tab and click `New`, completing the dialog as shown.
 
-    <img src="images/step2-1.jpg" width="50%" alt="Image description">
+    <img src="images/step2-1.jpg" width="80%" alt="Image description">
 
 2. Scroll down the next page to the `Principles` section and click `New`, completing the dialog as shown.
 
-    <img src="images/step2-2.jpg" width="50%" alt="Image description">
+    <img src="images/step2-2.jpg" width="80%" alt="Image description">
 
     > The default password for this tutorial is `agent`.
 
 3. Search for `Named Credentials` under `Setup` and select the 'Named Credentials' tab and click `New`, completing the dialog as shown.
 
-    <img src="images/step2-3.jpg" width="50%" alt="Image description">
+    <img src="images/step2-3.jpg" width="80%" alt="Image description">
 
     > To obtain the URL value right click the desired `Predeployed API URL` above or use the one given to you after completing your own Heroku deployment. The one shown the screenshot above is the Java predeployment.
 
@@ -56,28 +56,28 @@ Step 3 - Registering the Action API
 
 1. Search for `External Services` under `Setup` and click `Add an External Service` then select `From API Specification` and click `Next`, completing the dialog as shown then `Save & Next`.
 
-    <img src="images/step3-1.jpg" width="50%" alt="Image description">
+    <img src="images/step3-1.jpg" width="80%" alt="Image description">
 
     > To obtain the Schema shown, open the Swagger page for your deployed Action and click the link in the top left corner of the page this will be `/v3/api-docs` (Java) or `/swagger.json` (Python) and copy paste the entire contents. If you have not modified the code, or are using the predeployments above, you can click [here](https://agentforce-tutorial-java-fd05948b2c0a.herokuapp.com/v3/api-docs) (Java) or [here](https://agentforce-tutorial-python-7894e9215571.herokuapp.com/swagger.json) (Python).
 
 2. Finally on the next page select the `Operation` shown below and click `Next`.
 
-    <img src="images/step3-2.jpg" width="50%" alt="Image description">
+    <img src="images/step3-2.jpg" width="80%" alt="Image description">
 
 3.  Confirm you can see the input and output parameters as shown below and click `Finish`.
 
-    <img src="images/step3-3.jpg" width="50%" alt="Image description">
+    <img src="images/step3-3.jpg" width="80%" alt="Image description">
 
 Step 4 - Assigning Permissions
 ------------------------------
 
 1. Search for `Permission Sets` under `Setup` and click `New` and complete the page as shown, then click `Save`.
 
-    <img src="images/step4-1.jpg" width="50%" alt="Image description">
+    <img src="images/step4-1.jpg" width="80%" alt="Image description">
 
 2. Locate the `External Credential Principle Access` section and edit it such that it appears as shown.
 
-    <img src="images/step4-2.jpg" width="50%" alt="Image description">
+    <img src="images/step4-2.jpg" width="80%" alt="Image description">
 
 3. Finally, assign the permisison set to your current user using the `Manage Assignments` button.
 
@@ -96,23 +96,23 @@ Step 5 - Creating an Agentforce Action
 
     Your `Flow` should look like this so far.
 
-    <img src="images/step5-1.jpg" width="50%" alt="Image description">
+    <img src="images/step5-1.jpg" width="80%" alt="Image description">
 
 3. Click the `+` icon in the middle of the canvas and select `Action`. In the `Search Actions` sidebar search for `Heroku`, select the `Post Process` action and complete fields as shown.
 
-    <img src="images/step5-2.jpg" width="50%" alt="Image description">
+    <img src="images/step5-2.jpg" width="80%" alt="Image description">
 
 4. Click the `+` icon **before** the `Call Heroku` element on the canvas and select `Assignment` and complete as shown.
 
-    <img src="images/step5-3.jpg" width="50%" alt="Image description">
+    <img src="images/step5-3.jpg" width="80%" alt="Image description">
 
 5. Click the `+` icon **after** the `Call Heroku` element on the canvas and select `Assignment` and complete as shown.
 
-    <img src="images/step5-4.jpg" width="50%" alt="Image description">
+    <img src="images/step5-4.jpg" width="80%" alt="Image description">
 
 6. Finally your `Flow` should look like this.
 
-    <img src="images/step5-5.jpg" width="50%" alt="Image description">
+    <img src="images/step5-5.jpg" width="80%" alt="Image description">
 
 7. Now click `Save` and enter `Heroku Agent Action` and click `Save`, followed by clicking `Activate`.
 
@@ -120,11 +120,11 @@ Step 5 - Creating an Agentforce Action
 
     In the `Reference Action` search field search for `Heroku` so that you see the following.
 
-    <img src="images/step5-6.jpg" width="50%" alt="Image description">
+    <img src="images/step5-6.jpg" width="80%" alt="Image description">
 
 8. Complete defining the action as follows and click `Finish`.
 
-    <img src="images/step5-7.jpg" width="50%" alt="Image description">
+    <img src="images/step5-7.jpg" width="80%" alt="Image description">
 
     | Field | Text |
     | ----- | ---- |
@@ -147,7 +147,7 @@ Step 6 - Using Agent Builder
 
 6. Complete the dialog as shown and click `Finish`
 
-    <img src="images/step6-1.jpg" width="50%" alt="Image description">
+    <img src="images/step6-1.jpg" width="80%" alt="Image description">
 
 7. Finally click the `Activate` button in the top right of the screen.
 
