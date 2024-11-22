@@ -10,7 +10,7 @@ This tutorial will guide you through configuring an Agentforce Action deployed t
 Want to learn more before diving in?
 ------------------------------------
 
-The examples in this tutorial are intentionally basic to provide you with a clean starting point for developing your own actions. We have also provided fully built actions that we recommend reviewing first. When you are ready, continue below to start building your own Agentforce Action with Heroku.
+The examples in this tutorial are intentionally simple, designed to give you a clear starting point for creating your own actions. We have also included fully developed actions, and we recommend watching the video demonstrations first. Once you’re ready, proceed below to start building your own Agentforce Action with Heroku.
 
 | Example | Demo Video |  | Related Content
 | ------- | ---------- | ---------- | ---------------
@@ -33,6 +33,8 @@ With the above information, you have two paths to take:
 
 Step 2 - Creating a Named Credential
 ------------------------------------
+
+If you have not yet gained access to an Agentforce-enabled environment, please refer to the note above. The following steps assume that you are logged in and have administrator access to the Salesforce `Setup` menu.
 
 1. Search for `Named Credentials` under `Setup`, select the `External Credentials` tab, and click `New`, completing the dialog as shown.
 
