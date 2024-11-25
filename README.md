@@ -46,7 +46,7 @@ If you have not yet gained access to an Agentforce-enabled environment, please r
 
     > The default password for this tutorial is `agent`.
 
-3. Search for `Named Credentials` under `Setup`, select the 'Named Credentials' tab, and click `New`, completing the dialog as shown.
+3. Search for `Named Credentials` under `Setup`, select the `Named Credentials` tab, and click `New`, completing the dialog as shown.
 
     <img src="images/step2-3.jpg" width="80%" alt="Image description">
 
@@ -59,7 +59,14 @@ Step 3 - Registering the Action API
 
     <img src="images/step3-1.jpg" width="80%" alt="Image description">
 
-    > To obtain the schema shown, open the Swagger page for your deployed Action and click the link in the top left corner of the page. This will be `/v3/api-docs` (Java) or `/swagger.json` (Python). Copy and paste the entire contents. If you have not modified the code or are using the pre-deployments above, you can click [here](https://agentforce-tutorial-java-fd05948b2c0a.herokuapp.com/v3/api-docs) (Java) or [here](https://agentforce-tutorial-python-7894e9215571.herokuapp.com/swagger.json) (Python).
+    If you have not modified the action code yet or are using the pre-deployments above, you can click [here](https://agentforce-tutorial-java-fd05948b2c0a.herokuapp.com/v3/api-docs) (Java) or [here](https://agentforce-tutorial-python-7894e9215571.herokuapp.com/swagger.json) (Python) to obtain the schema and copy-paste it into the `Schema` field. Log in when prompted with user `heroku` and password `agent`.
+    
+    Alternatively, to obtain the dynamically generated schema for your own action deployment, refer to the instructions in the respective GitHub repository in the table above to open the API Test (Swagger) page. Then click the link just below the API title in the top left corner of the page, as shown in the examples below. Then copy and paste the entire contents into the `Schema` field above.
+    
+    <img src="images/step3-1-1.jpg" width="40%" alt="Image description">  
+    <img src="images/step3-1-2.jpg" width="30%" alt="Image description">
+    
+    For more information on the API Test (Swagger) page and authentication, see the respective sample code GitHub repositories listed in the table in step 1.
 
 2. Finally, on the next page, select the `Operation` shown below and click `Next`.
 
@@ -123,6 +130,8 @@ Step 5 - Creating an Agentforce Action
 
     <img src="images/step5-4.jpg" width="80%" alt="Image description">
 
+    > **Tip:** To complete the `Value` field click into the field and use the popup to select the `Outputs from the Call Heroku Action` resource, then click `_200` and finally `message`. <br/><img src="images/step5-4-1.jpg" width="30%" alt="Image description">
+
 6. Finally, your `Flow` should look like this:
 
     <img src="images/step5-5.jpg" width="80%" alt="Image description">
@@ -141,7 +150,7 @@ Step 5 - Creating an Agentforce Action
     | ----- | ---- |
     | `Agent Action Instructions` | Use this action to produce a unique Heroku badge with a custom name printed on it |
     | `AgentActionRequestName Instructions` | Name to be placed on the badge. Do not show the parameter name. |
-    | `AgentActionResponseMessage Instructions` | Display the action confirmation message. |
+    | `AgentActionResponseMessage Instructions` | Render the response as HTML rich text output. |
 
 Step 6 - Using Agent Builder
 ----------------------------
