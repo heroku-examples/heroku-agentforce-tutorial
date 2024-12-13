@@ -3,7 +3,7 @@ Creating Agentforce Custom Actions with Heroku
 
 This tutorial will guide you through configuring an Agentforce Action deployed to Heroku within your Salesforce org. This allows Agentforce agents to access powerful custom-coded actions written in Python and other languages, leveraging Heroku's fully managed and elastic compute service. By the end, you will be able to generate your own badge as shown below!
 
-> Ensure you have access to Agentforce by searching for `Agents` in the `Setup` menu. If not, you can create a temporary org by logging into Trailhead and creating a Playground per the instructions [at the top of this module](https://trailhead.salesforce.com/content/learn/projects/quick-start-explore-the-coral-cloud-sample-app/deploy-the-coral-cloud-sample-app) (you do not need to complete the module). Once you have access to the org, locate `Einstein Setup` under the `Setup` menu and enable Einstein, which will also enable Agentforce.
+> 💡 **Heroku Integration Pilot Notice:** These steps utilize generally availble features in Heroku and Salesforce. If you have joined the Heroku Integration pilot program and want to explore creating Agentforce Actions please ask for further information or check back here in the future for alternative steps.
 
 <img src="images/main.png" width="80%" alt="Image description">
 
@@ -19,6 +19,8 @@ The examples in this tutorial are intentionally simple, designed to give you a c
 
 Step 1 - Action API URL
 -----------------------
+
+> 💡 **Salesforce Org Requirements:** Ensure you have access to Agentforce in your org by searching for `Agents` in the `Setup` menu. If not, you can create a temporary org by logging into Trailhead and creating a Playground per the instructions [at the top of this module](https://trailhead.salesforce.com/content/learn/projects/quick-start-explore-the-coral-cloud-sample-app/deploy-the-coral-cloud-sample-app) (you do not need to complete the module). Once you have access to the org, locate `Einstein Setup` under the `Setup` menu and enable Einstein, which will also enable Agentforce.
 
 This tutorial provides examples in Java and Python for coding a basic Agentforce action. You can deploy these to your own Heroku account or proceed for now with the pre-deployed versions we have created for you.
 
