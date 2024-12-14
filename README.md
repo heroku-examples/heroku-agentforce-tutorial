@@ -50,9 +50,7 @@ Once complete check your application has been imported by searching for **Heroku
 Step 3 - Assigning Permissions
 ------------------------------
 
-The above process created a `HerokuAgentAction` permission set to control access to your application from within the org.
-
-Search for **Permisison Sets** under **Setup**, locate this permission set and click **Manage Assignments** to assign to your user.
+The above process created a `HerokuAgentAction` permission set to control access to your application from within the org. Search for **Permisison Sets** under **Setup**, locate this permission set and click **Manage Assignments** to assign to your user.
 
 Step 4 - Creating an Agentforce Action
 --------------------------------------
