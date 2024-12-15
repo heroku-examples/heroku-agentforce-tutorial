@@ -19,7 +19,7 @@ Complete the standard Heroku deployment instructions in one of the following rep
 | Python | [GitHub Repository](https://github.com/heroku-examples/heroku-agentforce-tutorial-python/tree/heroku-integration-pilot)
 | Java | [GitHub Repository](https://github.com/heroku-examples/heroku-agentforce-tutorial-java/tree/heroku-integration-pilot)
 
-Step 2 - Importing your Heorku App into a Salesforce org
+Step 2 - Importing your Heroku App into a Salesforce org
 --------------------------------------------------------
 
 > 💡 **Salesforce Org Requirements:**<br/>Ensure you have access to Agentforce in your org by searching for `Agents` in the `Setup` menu. If not, you can create a temporary org by logging into Trailhead and creating a Playground per the instructions [at the top of this module](https://trailhead.salesforce.com/content/learn/projects/quick-start-explore-the-coral-cloud-sample-app/deploy-the-coral-cloud-sample-app) (you do not need to complete the module). Once you have access to the org, locate `Einstein Setup` under the `Setup` menu and enable Einstein, which will also enable Agentforce.
@@ -34,15 +34,18 @@ Connect your Heroku application to the org you intend to configure Agentforce wi
 ```
 $ heroku salesforce:connect my-org --login-url "https://login.salesforce.com" --store-as-run-as-user
 ```
-Install the Heroku Integration Service Mesh buildpack to ensure incoming calls from the Salesforce org are authenticated correctly.
+Add the Heroku Integration Service Mesh buildpack to ensure incoming calls from the Salesforce org are authenticated correctly.
 ```
 $ heroku buildpacks:add https://github.com/heroku/heroku-buildpack-heroku-integration-service-mesh
-$ git commit --allow-empty -m "empty commit"
-$ git push heroku heroku-integration-pilot:main
 ```
-Import your application as an action into the connected org.
+Import your applications and its API specification into the connected org, for Python use `api-spec.json`.
 ```
 $ heroku salesforce:import api-spec.yaml --org-name my-org --client-name HerokuAgentAction
+```
+Lastly trigger a redeploy of the application to ensure the service mesh is running using the following commands .
+```
+$ git commit --allow-empty -m "empty commit"
+$ git push heroku heroku-integration-pilot:main
 ```
 
 Once complete check your application has been imported by searching for **Heroku** and then **Apps** under the **Setup** menu in your org.
@@ -50,9 +53,7 @@ Once complete check your application has been imported by searching for **Heroku
 Step 3 - Assigning Permissions
 ------------------------------
 
-The above process created a `HerokuAgentAction` permission set to control access to your application from within the org.
-
-Search for **Permisison Sets** under **Setup**, locate this permission set and click **Manage Assignments** to assign to your user.
+The above process created a `HerokuAgentAction` permission set to control access to your application from within the org. Search for **Permisison Sets** under **Setup**, locate this permission set and click **Manage Assignments** to assign to your user.
 
 Step 4 - Creating an Agentforce Action
 --------------------------------------
