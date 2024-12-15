@@ -10,9 +10,7 @@ This tutorial will guide you through configuring an Agentforce Action deployed t
 Step 1 - Deploy to Heroku
 -------------------------
 
-This tutorial provides examples in Java and Python for coding a basic Agentforce action. 
-
-Complete the standard Heroku deployment instructions in one of the following repositories before progressing to the next step.
+This tutorial provides examples in Java and Python for coding a basic Agentforce action. Complete the standard Heroku deployment instructions in one of the following repositories before progressing to the next step.
 
 | Language | GitHub Repository
 | -------- | ---------------
