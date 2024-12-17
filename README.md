@@ -5,17 +5,7 @@ This tutorial will guide you through configuring an Agentforce Action deployed t
 
 > 💡 **Heroku Integration Pilot:**<br/> These steps utilize generally availble features in Heroku and Salesforce. If you have joined the Heroku Integration pilot program please refer to these alternative [instructions](https://github.com/heroku-examples/heroku-agentforce-tutorial/tree/heroku-integration-pilot).
 
-<img src="images/main.png" width="80%" alt="Image description">
-
-Want to learn more before diving in?
-------------------------------------
-
-The examples in this tutorial are intentionally simple, designed to give you a clear starting point for creating your own actions. We have also included fully developed actions, and we recommend watching the video demonstrations first. Once you’re ready, proceed below to start building your own Agentforce Action with Heroku.
-
-| Example | Demo Video |  | Related Content
-| ------- | ---------- | ---------- | ---------------
-| The **Archive Agent** action demonstrates using Heroku to access and perform complex computations over unstructured archived data. It uses AI to interpret natural language requests from users to perform a wider array of dynamic calculations on the data. | [Link](https://youtu.be/mNgrdf1GX-w) | <img src="images/archiveagent2.png" width="80%" alt="Image description"> | [Blog](https://blog.heroku.com/building-supercharged-agents-heroku-agentforce) [Code](https://github.com/heroku-examples/agentforce-collage-agent)
-| With the **Coral Cloud Collage Agent**, we explore how Coral Cloud Resort invites its guests to browse and book unique experiences throughout their stay using Agentforce. With Heroku, we extend the agent's functionality to generate a personalized collage of each guest's adventures, showcasing how custom code deployed on Heroku can create dynamic digital media delivered directly within the Agentforce experience. | [Link](https://www.youtube.com/watch?v=yd97A9GLFUA&t=3s) | ![image](images/collage2.jpg) ![image](images/collage.png) | [Code](https://github.com/heroku-examples/agentforce-collage-agent)
+<img src="images/main.png" width="50%" alt="Image description">
 
 Step 1 - Action API URL
 -----------------------
@@ -150,9 +140,9 @@ Step 5 - Creating an Agentforce Action
 
     | Field | Text |
     | ----- | ---- |
-    | `Agent Action Instructions` | Use this action to produce a unique Heroku badge with a custom name printed on it |
-    | `AgentActionRequestName Instructions` | Name to be placed on the badge. Do not show the parameter name. |
-    | `AgentActionResponseMessage Instructions` | Render the response as HTML rich text output. |
+    | `Agent Action Instructions` | Use this action in response to requests for a Heroku badge with a name on it. |
+    | `AgentActionRequestName Instructions` | Name to be placed on the badge. |
+    | `AgentActionResponseMessage Instructions` | This is the Heroku badge the user requested. |
 
 Step 6 - Using Agent Builder
 ----------------------------
@@ -165,13 +155,15 @@ Step 6 - Using Agent Builder
 
 4. Click `Topics` and the `General CRM` topic. If the `New Version` button is shown, click it.
 
-5. Click the `This Topic's Actions` tab and select `Add from Asset Library` from the `New` button dropdown.
+5. Click the *Topic Configuration* tab and append "***Also including requests for badges.***" to the current contents of the *Classification Description* field.
 
-6. Complete the dialog as shown and click `Finish`.
+6. Click the `This Topic's Actions` tab and select `Add from Asset Library` from the `New` button dropdown.
+
+7. Complete the dialog as shown and click `Finish`.
 
     <img src="images/step6-1.jpg" width="80%" alt="Image description">
 
-7. Finally, click the `Activate` button in the top right of the screen.
+8. Finally, click the `Activate` button in the top right of the screen.
 
 Step 7 - Testing your Action
 ----------------------------
@@ -190,3 +182,13 @@ Summary
 Congratulations on deploying your first Heroku-powered Agentforce Action!
 
 We are working to improve and simplify this process, so please follow this repository to stay informed on updates.
+
+Need some inspiration on what to build?
+---------------------------------------
+
+The examples in this tutorial are intentionally simple, designed to give you a clear starting point for creating your own actions. We have also included fully developed actions below.
+
+| Example | Demo Video |  | Related Content
+| ------- | ---------- | ---------- | ---------------
+| The **Archive Agent** action demonstrates using Heroku to access and perform complex computations over unstructured archived data. It uses AI to interpret natural language requests from users to perform a wider array of dynamic calculations on the data. | [Link](https://youtu.be/mNgrdf1GX-w) | <img src="images/archiveagent2.png" width="80%" alt="Image description"> | [Blog](https://blog.heroku.com/building-supercharged-agents-heroku-agentforce) [Code](https://github.com/heroku-examples/agentforce-collage-agent)
+| With the **Coral Cloud Collage Agent**, we explore how Coral Cloud Resort invites its guests to browse and book unique experiences throughout their stay using Agentforce. With Heroku, we extend the agent's functionality to generate a personalized collage of each guest's adventures, showcasing how custom code deployed on Heroku can create dynamic digital media delivered directly within the Agentforce experience. | [Link](https://www.youtube.com/watch?v=yd97A9GLFUA&t=3s) | ![image](images/collage2.jpg) ![image](images/collage.png) | [Code](https://github.com/heroku-examples/agentforce-collage-agent)
