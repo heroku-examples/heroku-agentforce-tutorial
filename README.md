@@ -1,7 +1,7 @@
 Creating Agentforce Custom Actions with Heroku
 ==============================================
 
-> 💡 **Heroku Integration Pilot Only:**<br/>This branch is only intended for developers who have joined the Heroku Integration Pilot. If you have are not part of the pilot please refer to the main branch of this repository for alternative instructions.
+> 💡 **Heroku Integration Pilot Only:**<br/>This branch is only intended for developers who have joined the [Heroku Integration Pilot](https://www.youtube.com/watch?v=T5kOGNuTCLE). If you have are not part of the pilot please refer to the main branch of this repository for alternative instructions.
 
 This tutorial will guide you through configuring an Agentforce Action deployed to Heroku within your Salesforce org. This allows Agentforce agents to access powerful custom-coded actions written in Python and other languages, leveraging Heroku's fully managed and elastic compute service. By the end, you will be able to generate your own badge as shown below!
 
