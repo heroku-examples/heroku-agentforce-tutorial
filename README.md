@@ -1,8 +1,6 @@
 Creating Agentforce Custom Actions with Heroku
 ==============================================
 
-> 💡 **Heroku Integration Pilot Only:**<br/>This branch is only intended for developers who have joined the [Heroku Integration Pilot](https://www.youtube.com/watch?v=T5kOGNuTCLE). If you have are not part of the pilot please refer to the main branch of this repository for alternative instructions.
-
 This tutorial will guide you through configuring an Agentforce Action deployed to Heroku within your Salesforce org. This allows Agentforce agents to access powerful custom-coded actions written in Python and other languages, leveraging Heroku's fully managed and elastic compute service. By the end, you will be able to generate your own badge as shown below!
 
 <img src="images/main.png" width="50%" alt="Image description">
@@ -14,36 +12,36 @@ This tutorial provides examples in Java and Python for coding a basic Agentforce
 
 | Language | GitHub Repository
 | -------- | ---------------
-| Python | [GitHub Repository](https://github.com/heroku-examples/heroku-agentforce-tutorial-python/tree/heroku-integration-pilot)
-| Java | [GitHub Repository](https://github.com/heroku-examples/heroku-agentforce-tutorial-java/tree/heroku-integration-pilot)
+| Python | [GitHub Repository](https://github.com/heroku-examples/heroku-agentforce-tutorial-python)
+| Java | [GitHub Repository](https://github.com/heroku-examples/heroku-agentforce-tutorial-java)
 
 Step 2 - Importing your Heroku App into a Salesforce org
 --------------------------------------------------------
 
-> 💡 **Salesforce Org Requirements:**<br/>Ensure you have access to Agentforce in your org by searching for `Agents` in the `Setup` menu. If not, you can create a temporary org by logging into Trailhead and creating a Playground per the instructions [at the top of this module](https://trailhead.salesforce.com/content/learn/projects/quick-start-explore-the-coral-cloud-sample-app/deploy-the-coral-cloud-sample-app) (you do not need to complete the module). Once you have access to the org, locate `Einstein Setup` under the `Setup` menu and enable Einstein, which will also enable Agentforce.
+> 💡 **Salesforce Org Requirements:**<br/>Ensure you have access to Agentforce in your org by searching for `Agents` in the `Setup` menu. If not, you can obtain a free [Salesforce Developer Edition org here](https://www.salesforce.com/form/developer-signup/?d=pb).
 
 From the directory you completed the above deployment in, run the following commands.
 
 Add the Heroku Integration add-on to your application.
 ```
-$ heroku addons:create heroku-integration
+$ heroku addons:create heroku-applink
 ```
 Connect your Heroku application to the org you intend to configure Agentforce within.
 ```
-$ heroku salesforce:connect my-org --login-url "https://login.salesforce.com" --store-as-run-as-user
+$ heroku salesforce:connect my-org
 ```
 Add the Heroku Integration Service Mesh buildpack to ensure incoming calls from the Salesforce org are authenticated correctly.
 ```
-$ heroku buildpacks:add https://github.com/heroku/heroku-buildpack-heroku-integration-service-mesh
+$ heroku buildpacks:add https://github.com/heroku/heroku-buildpack-heroku-applink-service-mesh
 ```
 Import your applications and its API specification into the connected org, for Python use `api-spec.json`.
 ```
-$ heroku salesforce:import api-spec.yaml --org-name my-org --client-name HerokuAgentAction
+$ heroku salesforce:publish api-spec.yaml --org-name my-org --client-name HerokuAgentAction
 ```
 Lastly trigger a redeploy of the application to ensure the service mesh is running using the following commands .
 ```
 $ git commit --allow-empty -m "empty commit"
-$ git push heroku heroku-integration-pilot:main
+$ git push heroku main
 ```
 
 Once complete check your application has been imported by searching for **Heroku** and then **Apps** under the **Setup** menu in your org.
