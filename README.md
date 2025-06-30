@@ -28,6 +28,14 @@ Add the Heroku Integration add-on to your application.
 heroku addons:create heroku-applink
 ```
 
+Configure the application ID as follows:
+
+```
+heroku config:set HEROKU_APP_ID="$(heroku apps:info --json | jq -r '.app.id')"
+```
+
+> 💡 **jq utility:**<br/>If you do not have the `jq` utlity, run `heroku apps:info --json` manually and extract the value from the `app` json structure output to the console.
+
 Connect your Heroku application to the org you intend to configure Agentforce within.
 
 ```
