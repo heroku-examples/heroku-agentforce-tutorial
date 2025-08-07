@@ -17,8 +17,8 @@ This tutorial provides examples in Java and Python for coding a basic Agentforce
 
 Step 2 - Publishing your Heroku App into a Salesforce org
 ---------------------------------------------------------
-=======
-> 💡 **Heroku Integration Pilot:**<br/> These steps utilize generally availble features in Heroku and Salesforce. If you have joined the Heroku Integration pilot program please refer to these alternative [instructions](https://github.com/heroku-examples/heroku-agentforce-tutorial/tree/heroku-integration-pilot).
+
+> 💡 **Heroku AppLink:**<br/> These steps utilize generally availble features in Heroku and Salesforce. If you had joined the Heroku Integration pilot program please refer to these alternative [instructions](https://github.com/heroku-examples/heroku-agentforce-tutorial/tree/heroku-integration-pilot).
 
 <img src="images/main.png" width="50%" alt="Image description">
 
