@@ -3,7 +3,6 @@ Creating Agentforce Custom Actions with Heroku
 
 This tutorial will guide you through configuring an Agentforce Action deployed to Heroku within your Salesforce org. This allows Agentforce agents to access powerful custom-coded actions written in Python and other languages, leveraging Heroku's fully managed and elastic compute service. By the end, you will be able to generate your own badge as shown below!
 
-<<<<<<< HEAD
 <img src="images/main.png" width="50%" alt="Image description">
 
 Step 1 - Deploy to Heroku
@@ -22,17 +21,14 @@ Step 2 - Publishing your Heroku App into a Salesforce org
 > 💡 **Heroku Integration Pilot:**<br/> These steps utilize generally availble features in Heroku and Salesforce. If you have joined the Heroku Integration pilot program please refer to these alternative [instructions](https://github.com/heroku-examples/heroku-agentforce-tutorial/tree/heroku-integration-pilot).
 
 <img src="images/main.png" width="50%" alt="Image description">
->>>>>>> main
 
 > 💡 **Salesforce Org Requirements:**<br/>Ensure you have access to Agentforce in your org by searching for `Agents` in the `Setup` menu. If not, you can obtain a free [Salesforce Developer Edition org here](https://www.salesforce.com/form/developer-signup/?d=pb). Be sure to visit `Einstein Setup` to enable Einstein, the fresh the page and search for `Agentforce Agents` to enable Agentforce. Finally on the same page click `Enable the Agentforce (Default) Agent`.
 
-<<<<<<< HEAD
 From the directory you completed the above deployment in, run the following commands.
 =======
 > 💡 **Salesforce Org Requirements:** Ensure you have access to Agentforce in your org by searching for `Agents` in the `Setup` menu. If not, you can create a temporary org by logging into Trailhead and creating a Playground per the instructions [at the top of this module](https://trailhead.salesforce.com/content/learn/projects/quick-start-explore-the-coral-cloud-sample-app/deploy-the-coral-cloud-sample-app) (you do not need to complete the module). Once you have access to the org, locate `Einstein Setup` under the `Setup` menu and **Enable Einstein**, which will also enable Agentforce.
->>>>>>> main
 
-Add the Heroku Integration add-on to your application.
+Add Heroku AppLink to your application.
 
 ```
 heroku addons:create heroku-applink
@@ -52,7 +48,7 @@ Connect your Heroku application to the org you intend to configure Agentforce wi
 heroku salesforce:connect my-org
 ```
 
-Add the Heroku Integration Service Mesh buildpack to ensure incoming calls from the Salesforce org are authenticated correctly.
+Add Heroku AppLink Service Mesh buildpack to ensure incoming calls from the Salesforce org are authenticated correctly.
 
 ```
 $ heroku buildpacks:add https://github.com/heroku/heroku-buildpack-heroku-applink-service-mesh
@@ -89,7 +85,6 @@ Step 4 - Creating an Agentforce Action
 
     <img src="images/step4-7.jpg" width="80%" alt="Image description">
 
-<<<<<<< HEAD
 Step 5 - Using Agent Builder
 =======
     | Field | Text |
@@ -98,8 +93,6 @@ Step 5 - Using Agent Builder
     | `AgentActionRequestName Instructions` | Name to be placed on the badge. |
     | `AgentActionResponseMessage Instructions` | This is the Heroku badge the user requested. |
 
-Step 6 - Using Agent Builder
->>>>>>> main
 ----------------------------
 
 1. Search for `Agentforce Agents` under `Setup`.
@@ -110,13 +103,7 @@ Step 6 - Using Agent Builder
 
 4. Click `Topics` and the `General CRM` topic. If the `New Version` button is shown, click it.
 
-<<<<<<< HEAD
 5. Click the `Topic Configuration` tab and append "***Also including requests for badges.***" to the current contents of the `Classification Description` field. Click `Save`.
-
-5. Click the `General CRM` topic once more and then click `This Topic's Actions` tab and select `Add from Asset Library`, select the `Generate Badge` action.
-=======
-5. Click the *Topic Configuration* tab and append "***Also including requests for badges.***" to the current contents of the *Classification Description* field.
->>>>>>> main
 
 6. Click the `This Topic's Actions` tab and select `Add from Asset Library` from the `New` button dropdown.
 
@@ -140,10 +127,8 @@ Step 6 - Testing your Action
 Summary
 -------
 
-<<<<<<< HEAD
-Congratulations on deploying your first Heroku-powered Agentforce Action!
-=======
-Congratulations on deploying your first Heroku-powered Agentforce Action!
+
+**Congratulations on deploying your first Heroku-powered Agentforce Action!**
 
 We are working to improve and simplify this process, so please follow this repository to stay informed on updates.
 
@@ -156,4 +141,3 @@ The examples in this tutorial are intentionally simple, designed to give you a c
 | ------- | ---------- | ---------- | ---------------
 | The **Archive Agent** action demonstrates using Heroku to access and perform complex computations over unstructured archived data. It uses AI to interpret natural language requests from users to perform a wider array of dynamic calculations on the data. | [Link](https://youtu.be/mNgrdf1GX-w) | <img src="images/archiveagent2.png" width="80%" alt="Image description"> | [Blog](https://blog.heroku.com/building-supercharged-agents-heroku-agentforce) [Code]([https://github.com/heroku-examples/agentforce-collage-agent](https://github.com/heroku-reference-apps/agentforce-archive-agent))
 | With the **Coral Cloud Collage Agent**, we explore how Coral Cloud Resort invites its guests to browse and book unique experiences throughout their stay using Agentforce. With Heroku, we extend the agent's functionality to generate a personalized collage of each guest's adventures, showcasing how custom code deployed on Heroku can create dynamic digital media delivered directly within the Agentforce experience. | [Link](https://www.youtube.com/watch?v=yd97A9GLFUA&t=3s) | ![image](images/collage2.jpg) ![image](images/collage.png) | [Code](https://github.com/heroku-examples/agentforce-collage-agent)
->>>>>>> main
